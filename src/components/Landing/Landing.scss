@@ -1,0 +1,29 @@
+#landing {
+  background: url("../../images/study_bud_background.jpg");
+  height: 100vh;
+  background-position-x: -150px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  ul {
+    display: flex;
+    width: 35%;
+    justify-content: space-around;
+    li {
+      list-style-type: none;
+    }
+  }
+  #right_nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+  }
+}
+main {
+  width: 60vw;
+  margin: 10% auto;
+}
