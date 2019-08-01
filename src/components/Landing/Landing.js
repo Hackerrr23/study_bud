@@ -1,6 +1,8 @@
 import React from "react";
 import "./Landing.scss";
 
+import Register from "../Register/Register";
+
 export default function Landing() {
   return (
     <div id="landing">
@@ -23,9 +25,10 @@ export default function Landing() {
         <h3>Reach Your Full Potential</h3>
         <div>
           <div id="main_action_buttons">
-            <a href="#" class="button">
+            {/* <a href="#" class="button">
               REGISTER
-            </a>
+            </a> */}
+            <Register />
             <a href="#" class="button2">
               LOGIN
             </a>
