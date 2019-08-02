@@ -9,7 +9,7 @@ export default function Landing() {
       <header>
         <nav>
           <ul>
-            <h2>Study Bud</h2>
+            <h2>StudyUp</h2>
             <li>How It Works</li>
             <li>About</li>
           </ul>

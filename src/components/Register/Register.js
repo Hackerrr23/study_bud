@@ -1,4 +1,5 @@
 import React from "react";
+import "./Register.scss";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
@@ -31,29 +32,67 @@ export default function FormDialog() {
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            To subscribe to this website, please enter your email address here.
-            We will send updates occasionally.
-          </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
-            fullWidth
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
-          </Button>
-        </DialogActions>
+        <div id="dialog">
+          <DialogTitle id="form-dialog-title">Sign Up For StudyUP</DialogTitle>
+          <DialogContent>
+            <DialogContentText />
+            <TextField
+              className="Name"
+              margin="dense"
+              id="Name"
+              label="Your Name"
+              type="name"
+              fullWidth
+              required="true"
+            />
+            <div id="text_fields">
+              <TextField
+                autoFocus
+                margin="dense"
+                id="name"
+                label="Email Address"
+                type="email"
+                fullWidth
+                required="true"
+              />
+              <TextField
+                className="text"
+                margin="dense"
+                id="password"
+                label="Password"
+                type="password"
+                fullWidth
+                required="true"
+              />
+              <div id="or">
+                <hr />
+                <h2>OR</h2>
+                <hr />
+              </div>
+              <div id="social_logins">
+                <a id="haha" href="#">
+                  Login With
+                  <span>
+                    <i className="devicon-facebook-plain colored" />
+                  </span>
+                </a>
+                <a>
+                  Login With <i class="devicon-google-plain colored" />
+                </a>
+              </div>
+            </div>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} color="primary">
+              <p id="account_already">
+                Already Have An Account?
+                <a id="sign" href="#">
+                  Sign-In Here
+                </a>
+              </p>
+            </Button>
+          </DialogActions>
+        </div>
       </Dialog>
     </div>
   );
