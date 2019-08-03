@@ -34,6 +34,24 @@ export default function FormDialog() {
   function handleClose_1() {
     setOpen2(false);
   }
+  function loginUser() {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        var displayName = user.displayName;
+        var email = user.email;
+        var emailVerified = user.emailVerified;
+        var photoURL = user.photoURL;
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        var providerData = user.providerData;
+        // ...
+      } else {
+        // User is signed out.
+        // ...
+      }
+    });
+  }
   return (
     <div>
       <div id="social_logins_1">
@@ -96,7 +114,7 @@ export default function FormDialog() {
                     <i className="devicon-facebook-plain colored" />
                   </span>
                 </a>
-                <a>
+                <a onClick={loginUser}>
                   Login With
                   <i class="devicon-google-plain colored" />
                 </a>
