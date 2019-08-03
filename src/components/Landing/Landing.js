@@ -29,9 +29,6 @@ export default function Landing() {
               REGISTER
             </a> */}
             <Register />
-            <a href="#" class="button2">
-              LOGIN
-            </a>
           </div>
         </div>
       </main>
