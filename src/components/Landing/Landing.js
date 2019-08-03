@@ -24,12 +24,7 @@ export default function Landing() {
         <h1>Together, We A+</h1>
         <h3>Reach Your Full Potential</h3>
         <div>
-          <div id="main_action_buttons">
-            {/* <a href="#" class="button">
-              REGISTER
-            </a> */}
-            <Register />
-          </div>
+          <Register />
         </div>
       </main>
     </div>

@@ -5,6 +5,7 @@
   text-align: center;
   border: 10px solid lightgray;
   border-radius: 10px;
+  overflow: hidden;
 }
 #yes {
   color: red;
@@ -55,4 +56,10 @@ span {
 }
 #sign_in_dialog {
   display: none;
+}
+#social_logins_1 {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0 auto;
 }

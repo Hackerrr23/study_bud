@@ -16,29 +16,41 @@ export default function FormDialog() {
     setOpen(true);
   }
   function handleClickOpen2() {
-    setOpen(true);
+    setOpen2(true);
   }
+  //toggle register and login
   function handleClose() {
     setOpen(false);
     setOpen2(true);
   }
   function handleClose2() {
     setOpen2(false);
+    setOpen(true);
   }
-
+  //cancel buttons
+  function handleClose_0() {
+    setOpen(false);
+  }
+  function handleClose_1() {
+    setOpen2(false);
+  }
   return (
     <div>
-      <a href="#" class="button" onClick={handleClickOpen}>
-        REGISTER
-      </a>
-      <a href="#" class="button2">
-        LOGIN
-      </a>
+      <div id="social_logins_1">
+        <a href="#" class="button" onClick={handleClickOpen}>
+          REGISTER
+        </a>
+        <a href="#" class="button2" onClick={handleClickOpen2}>
+          LOGIN
+        </a>
+      </div>
+
       <Dialog
-        className="animated bounce"
+        // className="animated bounce"
         open={open}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
+        disableBackdropClick="true"
       >
         <div id="dialog">
           <DialogTitle id="form-dialog-title">Sign Up For StudyUP</DialogTitle>
@@ -99,14 +111,22 @@ export default function FormDialog() {
               </a>
             </p>
           </DialogActions>
+          <Button
+            onClick={handleClose_0}
+            color="primary"
+            className="cancel_dialog"
+          >
+            Cancel
+          </Button>
         </div>
       </Dialog>
       {/* Sign In Dialog */}
       <Dialog
         className="animated slideInRight"
         open={open2}
-        onClose={handleClose2}
+        onClose={handleClose_0}
         aria-labelledby="form-dialog-title"
+        disableBackdropClick="true"
       >
         <div id="dialog">
           <DialogTitle id="form-dialog-title">Sign In For StudyUP</DialogTitle>
@@ -161,15 +181,20 @@ export default function FormDialog() {
             </div>
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleClose} color="primary">
-              <p id="account_already">
-                Already Have An Account?
-                <a id="sign" href="#">
-                  Sign-In Here
-                </a>
-              </p>
-            </Button>
+            <p id="account_already">
+              Already Have An Account?
+              <a id="sign" href="#" onClick={handleClose2}>
+                Sign-In Here
+              </a>
+            </p>
           </DialogActions>
+          <Button
+            onClick={handleClose_1}
+            color="primary"
+            className="cancel_dialog"
+          >
+            Cancel
+          </Button>
         </div>
       </Dialog>
       <div id="sign_in_dialog">
