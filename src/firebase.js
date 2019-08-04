@@ -1,7 +1,7 @@
 import { firebase } from "@firebase/app";
 import "firebase/firebase-storage";
 
-var firebaseConfig = {
+var config = {
   apiKey: "AIzaSyDGv8ii2j6zjBZhKJGtTNuoLNewFOI57ac",
   authDomain: "studyup-bb1a1.firebaseapp.com",
   databaseURL: "https://studyup-bb1a1.firebaseio.com",
